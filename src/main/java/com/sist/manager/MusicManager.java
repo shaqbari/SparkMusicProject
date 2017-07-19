@@ -76,4 +76,20 @@ public class MusicManager {
 		return url;
 	}
 	
+	public MusicVO musicDetailDAta(String title){
+		MusicVO vo=new MusicVO();
+		List<MusicVO> list=melonTop100();
+		for (MusicVO m : list) {
+			if (title.equals(m.getTitle())) {
+				vo.setTitle(m.getTitle());
+				vo.setRank(m.getRank());
+				vo.setSinger(m.getSinger());
+				break;
+			}
+		}
+		vo.setLink(youtubeGetLink(title));
+		
+		return vo;
+		
+	}
 }

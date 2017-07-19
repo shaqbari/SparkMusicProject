@@ -11,6 +11,7 @@ import com.sist.daum.DaumManager;
 import com.sist.manager.MusicManager;
 import com.sist.manager.MusicVO;
 import com.sist.naver.NaverManager;
+import com.sist.r.RManager;
 import com.sist.review.DataDirectory;
 import com.sist.weather.WeatherManager;
 import com.sist.weather.WeatherVO;
@@ -35,6 +36,9 @@ public class MusicController {
 	
 	@Autowired
 	private HadoopManager hm;
+	
+	@Autowired
+	private RManager rm;
 	
 	@RequestMapping("main/main.do")
 	public String main_main(Model model){
@@ -75,6 +79,12 @@ public class MusicController {
 		hm.copyFromLocal();
 		hm.mapReduceExcute();
 		hm.copyToLocal();
+		
+		MusicVO vo=mgr.musicDetailDAta(title);
+		model.addAttribute("vo", vo);
+		
+		rm.barchart();
+		rm.wordcloud();
 		
 		return "main/detail";
 	}

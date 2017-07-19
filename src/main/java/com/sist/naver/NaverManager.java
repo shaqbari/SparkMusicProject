@@ -70,7 +70,7 @@ public class NaverManager {
     		//data=data.replaceAll("[^가-힣 ]", "");//한글, 공백빼고 다 지운다.//이번에는 패턴을 이용하므로 안쓴다.
     		
     		FileWriter fw=new FileWriter("/home/sist/music_data/naver.txt");
-    		fw.write(data);
+    		fw.write(data.replaceAll("[^가-힣 ]", ""));//한글과 공백!이외에는 지운다.
     		fw.close();
 			
     		

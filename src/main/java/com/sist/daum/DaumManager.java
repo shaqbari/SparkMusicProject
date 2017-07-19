@@ -22,7 +22,7 @@ public class DaumManager {
 				
 			}
 			FileWriter fw=new FileWriter("/home/sist/music_data/daum.txt");
-			fw.write(data);
+			fw.write(data.replaceAll("[^가-힣 ]", ""));//한글과 공백!이외에는 지운다.
 			fw.close();
 			
 		} catch (Exception e) {

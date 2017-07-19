@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 public class DataDirectory {
 	public String[] dataDir1(){
 		String[] data={"봄", "여름", "가을",	 "겨울", "화창한날", "아침",
-				"오후", "저녁", "밤/새벽", "비/흐림", "크리스마스", "여행"};
+				"오후", "저녁", "밤/새벽", "비/흐림", "크리스마스", "눈오는날"};
 		
 		return data;
 	}

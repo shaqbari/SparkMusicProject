@@ -29,7 +29,7 @@ $(function(){
 
 <body>
 <%-- <%=application.getRealPath("/") %> --%>
-<!-- /home/sist/springDev/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/SpringMovieFindProject/  -->
+<!-- /home/sist/bigdataDev2/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/SpringMusicProject/   -->
 <div class="container">
   <div class="top">
     <div class="search-button">
